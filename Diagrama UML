@@ -1,0 +1,75 @@
+i# Trabalho03POOListadeTarefas
+Programa em SWING de uma ToDoList (lista de tarefas).
+
+Diagrama da UML: 
+
++----------------------------------+                         +---------------------------------------------+
+|            Main                  |                         |              Task                           |  
++----------------------------------+                         +---------------------------------------------+
+| - main(args: String[]): void     |                         | - title: String                             |
++----------------------------------+                         | - dueDate: Date                             |
+                |                                            | - createdDate: Date                         |                  
+                |                                            | - status: Status                            |
+                |                                            | - projectName: String                       |
+                V                                    ------> +---------------------------------------------+
++----------------------------------+                 |       | + getTitle(): String                        |
+|           Display                | ------------    |       | + setTitle(title: String): void             |
++----------------------------------+            |    |       | + getProjectName(): String                  |
+| - start(): void                  |            |    |       | + setProjectName(projectName: String): void |
++----------------------------------+            |    |       | + getDueDate(): Date                        |
+                                                |    |       | + setDueDate(dueDate: Date): void           |
++-------------------------------------------+   |    |       | + getStatus(): Status                       |
+|             ToDoList                      |   |    |       | + setStatus(status: Status): void           |
++-------------------------------------------+   |    |       | + getCreatedDate(): Date                    |
+| - toDoList: List<Task>                    |  _| ___|       | + setCreatedDate(createdDate: Date): void   |
++-------------------------------------------+   |            +---------------------------------------------+
+| + remove(index: int): void                |   | 
+| + setToDoList(newTasks: List<Task>): void |   | 
+| + getToDoList(): List<Task>               |   | 
+| + getTaskInToDo(index: int): Task         |   | 
++-------------------------------------------+   |            +---------------------------------------------+
+             |                                  |--------->  |             Print                           |
+             v                                               +---------------------------------------------+
++--------------------------+                                 | - listOfToDos: List<Task>                   |
+|          Status          |                                 | - sdf: SimpleDateFormat                     | 
++--------------------------+                                 +---------------------------------------------+
+| + DONE: Status           |                                 | + Print(listOfToDos: List<Task>)            |
+| + PENDING: Status        |                                 | + printHeading(): void                      |
++--------------------------+                                 | + printEntireList(): void                   |
+| + serialVersionUID: long |                                 | + printTasksByStatus(status: Status): void  |
++--------------------------+                                 | + printTasksByProject(): void               |
+                                                             | + printBody(task: Task): void               |
+                                                             | + printTaskByDueDate(): void                |
+                                                             | + printOnlyIndexAndNameOfTask(): void       |
+                                                             | + printIndexAndNameAndProjectOfTask(): void |
+                                                             | + printIndexAndNameAndDueDateOfTask(): void |
+                                                             | + printWelcome(): void                      |
+                                                             | + getBackAmount(status: Status): int        |
+                                                             | + printOptions(): void                      |  
+                                                             | + printNotValiableOption(): void            |
+                                                             | + printWrongDateFormat(): void              |
+                                                             | + printWhenQuitApplication(): void          |
+                                                             | + printIndexOutOfReach(): void              |
+                                                             | + printUpdateOptions(): void                |
+                                                             | + printEditTaskOptions(): void              |
+                                                             | + printSortingOptions(): void               |
+                                                             | + printPressEnterForMenu(): void            |
+                                                             +---------------------------------------------+
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
+                                                             
+                                                                                                                          
+                                                             
+                                                             
+                                                             
+                                                             
+
+
+
+                                                             
+
